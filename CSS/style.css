@@ -28,8 +28,6 @@ body {
     /* Cor de fundo cinza do cabeçalho */
     border-radius: 5px;
     /* Arredonda levemente as pontas do cabeçalho */
-    position: sticky;
-    /* Faz o cabeçalho "grudar" no topo ao rolar */
     top: 0;
     /* Define que ele gruda exatamente no topo (0) */
     width: 100%;
@@ -89,10 +87,17 @@ a:hover {
     /* Muda a cor para vermelho escuro quando passa o mouse */
 }
 
-#Produto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.container-cards {
+    display: flex;
+    /* Ativa o modo Flexbox */
+    flex-wrap: wrap;
+    /* Se não couber na tela, pula para a linha de baixo */
+    justify-content: center;
+    /* Centraliza os cards na largura da página */
     gap: 20px;
+    /* Cria o espaço entre os cards sem precisar de margin manual */
+    padding: 40px 5%;
+    /* Espaçamento interno nas laterais do site */
 }
 
 .card {
@@ -109,9 +114,9 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-.card-hover {
+.card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .img-card {
@@ -128,14 +133,21 @@ a:hover {
     gap: 10px;
 }
 
-.card-nome{
+.card-nome {
     margin: 0;
     font-size: 1.2rem;
     color: #333;
 }
 
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px
+}
+
+
 .button {
-    background-color: azure;
+    background-color: rgb(8, 150, 27);
     /* Fundo do botão */
     padding: 12px 24px;
     /* Espaçamento interno (altura e largura) */
@@ -148,7 +160,7 @@ a:hover {
 }
 
 .button:hover {
-    background-color: darkred;
+    background-color: rgb(80, 225, 138);
     /* Muda o fundo para vermelho ao passar o mouse */
     color: aliceblue;
     /* Muda a cor do texto para branco azulado */
