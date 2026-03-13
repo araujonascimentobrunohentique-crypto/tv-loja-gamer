@@ -4,35 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loja gamer</title>
+
+    <title>PC TEC</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <!-- header do site -->
     <header id="head">
-        <img class="logo" src="../img/logo.png" alt="">
         <h1 id="titulo">PC TEC</h1>
         <nav>
             <p><a href="">Sobre</a></p>
-            <p><a href="">Produtos</a></p>
-            <p><a href="">Contatos</a></p>
+            <p><a href="#produtos">Produtos</a></p>
+            <p><a href="#footer">Contatos</a></p>
         </nav>
-        <button class="button">🛒</button>
+        <div class="cardcarrinho"> 🛒 Carrinho:
+            <span class="total-carrinho"></span>
+            <span class="total-carrinho2"></span>
+        </div>
     </header>
 
     <!-- meio do site -->
     <main>
         <div id="Produtos">
             <section class="container-cards">
-
                 <div class="card">
-                 <img src="../img/teclado.jpg" alt="" class="img-card">
+                    <img src="../img/teclado.jpg" alt="" class="img-card">
                     <div class="card-body">
                         <h3 class="card-nome">Teclado Mecânico</h3>
                         <p class="card-preco"> R$ 119,00</p>
                         <p class="card-text">Switch Blue com resposta tátil e iluminação RGB.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
 
@@ -42,7 +45,8 @@
                         <h3 class="card-nome">Mouse gamer</h3>
                         <p class="card-preco">R$ 92,00</p>
                         <p class="card-text">Reposta Rapida e iluminação LED dinâmica.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
                 <div class="card">
@@ -51,7 +55,8 @@
                         <h3 class="card-nome">Headset RGB</h3>
                         <p class="card-preco">R$ 159,00</p>
                         <p class="card-text">Som surround e iluminação LED dinâmica.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
 
@@ -59,9 +64,10 @@
                     <img src="../img/monitor.webp" alt="Monitor 27" class="img-card">
                     <div class="card-body">
                         <h3 class="card-nome">Monitor 27"</h3>
-                        <p class="card-preco">R$ 1.200,00</p>
+                        <p class="card-preco">R$ 1200,00</p>
                         <p class="card-text">Painel IPS com taxa de atualização de 144Hz.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
 
@@ -71,7 +77,8 @@
                         <h3 class="card-nome">Mousepad XXL</h3>
                         <p class="card-preco">R$ 89,00</p>
                         <p class="card-text">Superfície speed para maior precisão nos jogos.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
 
@@ -81,7 +88,8 @@
                         <h3 class="card-nome">Webcam HD</h3>
                         <p class="card-preco">R$ 199,00</p>
                         <p class="card-text">Resolução 1080p com microfone integrado.</p>
-                        <button class="button">comprar</button>
+                        <button class="botao">comprar</button>
+                        <button class="botao2">retirar</button>
                     </div>
                 </div>
             </section>
@@ -90,12 +98,13 @@
 
     <!-- final do site -->
     <footer id="footer">
-        <p> Meu Site - Todos os direitos reservados &copy; 2026.</p>
         <p>TELEFONE:19 9999-9999</p>
         <p>REDES:
             <a href="">INSTAGRAM</a>
             <a href="">LINKDIN</a>
         </p>
+        <p> Meu Site - Todos os direitos reservados &copy; 2026.</p>
+        <a href="#head">VOLTAR AO TOPO</a>
     </footer>
 
 </body>

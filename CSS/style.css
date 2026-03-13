@@ -1,6 +1,5 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* Define a fonte (se não tiver a primeira, usa a segunda...) */
     margin: 0;
     /* Remove o espaço em branco padrão nas bordas da página */
     padding: 0;
@@ -8,15 +7,12 @@ body {
     box-sizing: border-box;
     /* Faz com que padding/bordas não aumentem o tamanho total do elemento */
     background-color: #ffffff;
-    /* Cor de fundo da página (branco) */
     color: #222;
-    /* Cor padrão do texto (quase preto) */
     line-height: 1.5;
     /* Altura da linha (espaçamento entre linhas de texto) */
     overflow-x: hidden;
     /* Esconde a barra de rolagem horizontal se algo "vazar" */
     display: flex;
-    /* Ativa o Flexbox para organizar o layout do corpo */
     flex-direction: column;
     /* Empilha os elementos (header, main, footer) em coluna */
     min-height: 100vh;
@@ -25,21 +21,16 @@ body {
 
 #head {
     background-color: #5e5e5e;
-    /* Cor de fundo cinza do cabeçalho */
     border-radius: 5px;
-    /* Arredonda levemente as pontas do cabeçalho */
     top: 0;
     /* Define que ele gruda exatamente no topo (0) */
     width: 100%;
     /* Garante que o cabeçalho ocupe toda a largura */
     display: flex;
-    /* Ativa o Flexbox para alinhar itens internos */
     justify-content: space-between;
     /* Afasta os itens: logo num canto, menu no outro */
     align-items: center;
-    /* Alinha logo e links verticalmente ao centro */
     gap: 20px;
-    /* Espaçamento mínimo entre os elementos internos */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     /* Sombra suave para dar profundidade */
 }
@@ -100,11 +91,19 @@ a:hover {
     /* Espaçamento interno nas laterais do site */
 }
 
+.cardcarrinho {
+    background-color: darkgreen;
+    border-radius: 15px;
+    overflow: hidden;
+    /* faz ela respeitar as bordas do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
 .card {
     max-width: 300px;
     /* define um tamanho para o card */
     border-radius: 15px;
-    /* coloca borda no card */
     overflow: hidden;
     /* faz ela respeitar as bordas do card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -144,35 +143,46 @@ a:hover {
     color: #666;
     margin-bottom: 15px
 }
-
-
-.button {
+.botao {
     background-color: rgb(8, 150, 27);
-    /* Fundo do botão */
     padding: 12px 24px;
-    /* Espaçamento interno (altura e largura) */
     border-radius: 8px;
-    /* Arredonda as pontas do botão */
     border: none;
     /* Tira a borda padrão do botão */
     cursor: pointer;
     /* Faz aparecer a "mãozinha" do mouse */
 }
 
-.button:hover {
+.botao:hover {
     background-color: rgb(80, 225, 138);
-    /* Muda o fundo para vermelho ao passar o mouse */
     color: aliceblue;
-    /* Muda a cor do texto para branco azulado */
     transform: translateY(-2px);
-    /* Faz o botão "subir" levemente (efeito 3D) */
+    /* Faz o botão "subir" levemente */
+}
+
+.botao2 {
+    background-color: rgb(185, 63, 63);
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    /* Tira a borda padrão do botão */
+    cursor: pointer;
+    /* Faz aparecer a "mãozinha" do mouse */
+}
+
+.botao2:hover {
+    background-color: rgb(225, 80, 80);
+    color: aliceblue;
+    transform: translateY(-2px);
+    /* Faz o botão "subir" levemente */
 }
 
 #footer {
     background-color: #5e5e5e;
-    /* Cor de fundo do rodapé */
+
+
     text-align: center;
-    /* Centraliza o texto */
+
     justify-content: center;
     /* Centraliza o conteúdo do rodapé */
     margin-top: auto;
@@ -189,17 +199,18 @@ a:hover {
     flex-direction: column;
     /* Coloca um item embaixo do outro */
     align-items: center;
-    /*alinha os items*/
     gap: 15px;
-    /*gera espaço entre os items*/
 }
 
 footer a {
     color: #d7d7d7;
-    /* cor da palavras */
     text-decoration: none;
     /* tira a linha do link */
     margin: 0 10px;
-    /* margim do lado */
     transition: 0.3s;
+}
+
+.animar {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }
